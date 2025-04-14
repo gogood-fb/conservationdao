@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAO Fundamentals | Re:Wild DAO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Understanding the fundamentals of Decentralized Autonomous Organizations (DAOs) for conservation">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Re:Wild DAO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dao-fundamentals.html">DAO Fundamentals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="applications.html">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opportunities-risks.html">Opportunities & Risks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilot-projects.html">Pilot Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="implementation.html">Implementation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="appendixDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Appendices
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="appendixDropdown">
+                            <li><a class="dropdown-item" href="references.html">References & Sources</a></li>
+                            <li><a class="dropdown-item" href="technical-specs.html">Technical Specifications</a></li>
+                            <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                            <li><a class="dropdown-item" href="legal-considerations.html">Legal Considerations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" style="background-image: url('banner.png');">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>DAO Fundamentals</h1>
+                    <p class="lead">Understanding the core concepts of Decentralized Autonomous Organizations for conservation</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>What is a DAO?</h2>
+                    <p>A Decentralized Autonomous Organization (DAO) is a community-led entity with no central authority. It is fully autonomous and transparent: smart contracts lay the foundational rules, execute the agreed upon decisions, and at any point, proposals, voting, and even the very code itself can be publicly audited.</p>
+                    
+                    <p>DAOs are internet-native organizations collectively owned and managed by their members. They have built-in treasuries that are only accessible with the approval of their members. Decisions are made via proposals the group votes on during a specified period.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Key Characteristics of DAOs</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Decentralization</h5>
+                                    <p>No single entity has complete control; governance is distributed among members according to established rules.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Autonomy</h5>
+                                    <p>Operations are automated through smart contracts, reducing the need for centralized management.</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Transparency</h5>
+                                    <p>All rules, transactions, and activities are recorded on a blockchain and visible to all participants.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Community Governance</h5>
+                                    <p>Decision-making power is distributed among members, typically through voting mechanisms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>How DAOs Work</h2>
+                    <p>DAOs operate through a combination of blockchain technology, smart contracts, and governance mechanisms:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Technical Foundation</div>
+                        <div class="card-body">
+                            <h5>Blockchain</h5>
+                            <p>DAOs are built on blockchain platforms (like Ethereum, Polygon, or Solana) that provide the infrastructure for decentralized applications. The blockchain serves as an immutable ledger of all DAO activities and transactions.</p>
+                            
+                            <h5>Smart Contracts</h5>
+                            <p>Smart contracts are self-executing programs that automatically implement the rules and decisions of the DAO. They handle everything from membership management to treasury operations and voting processes.</p>
+                            
+                            <h5>Tokens</h5>
+                            <p>Most DAOs use tokens to represent membership, voting rights, or ownership shares. These tokens can be distributed based on contributions, purchased, or earned through participation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Governance Process</div>
+                        <div class="card-body">
+                            <ol>
+                                <li><strong>Proposal Submission:</strong> Members submit proposals for changes, actions, or funding allocations.</li>
+                                <li><strong>Discussion Period:</strong> The community discusses and refines proposals before voting.</li>
+                                <li><strong>Voting:</strong> Members vote on proposals, with voting power typically determined by token holdings or other contribution metrics.</li>
+                                <li><strong>Execution:</strong> If approved, proposals are automatically executed through smart contracts or implemented by designated teams.</li>
+                                <li><strong>Monitoring:</strong> Results and impacts are tracked transparently on the blockchain.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h2>Web3 Tools for DAOs</h2>
+                    <p>Web3 refers to the next generation of internet applications built on decentralized blockchain technology. Several Web3 tools are particularly relevant for DAO operations:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Essential Web3 Tools</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Governance Platforms</h5>
+                                    <ul>
+                                        <li><strong>Snapshot:</strong> Off-chain voting system</li>
+                                        <li><strong>Aragon:</strong> DAO creation and management</li>
+                                        <li><strong>Colony:</strong> Reputation-based governance</li>
+                                        <li><strong>Tally:</strong> On-chain governance dashboard</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Treasury Management</h5>
+                                    <ul>
+                                        <li><strong>Gnosis Safe:</strong> Multi-signature treasury</li>
+                                        <li><strong>Parcel:</strong> Payroll and expenses</li>
+                                        <li><strong>Llama:</strong> Treasury analytics</li>
+                                        <li><strong>Superfluid:</strong> Streaming payments</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Coordination Tools</h5>
+                                    <ul>
+                                        <li><strong>Coordinape:</strong> Peer-to-peer rewards</li>
+                                        <li><strong>SourceCred:</strong> Contribution tracking</li>
+                                        <li><strong>Dework:</strong> Task management</li>
+                                        <li><strong>Guild:</strong> Token-gated access</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Funding Mechanisms</h5>
+                                    <ul>
+                                        <li><strong>Gitcoin:</strong> Quadratic funding</li>
+                                        <li><strong>Juicebox:</strong> Crowdfunding platform</li>
+                                        <li><strong>Mirror:</strong> Writing and fundraising</li>
+                                        <li><strong>Syndicate:</strong> Investment DAOs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Types of DAOs</h2>
+                    <p>DAOs come in many forms, each designed for specific purposes and communities:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Common DAO Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Protocol DAOs</h5>
+                                    <p>Govern decentralized protocols and applications, making decisions about technical upgrades, parameter changes, and treasury allocations.</p>
+                                    <p><em>Examples: MakerDAO, Uniswap</em></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Investment DAOs</h5>
+                                    <p>Pool capital from members to invest in assets, projects, or other ventures, with returns distributed back to members.</p>
+                                    <p><em>Examples: MetaCartel, The LAO</em></p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Social DAOs</h5>
+                                    <p>Focus on building communities around shared interests, with membership often represented by NFTs or tokens.</p>
+                                    <p><em>Examples: Friends With Benefits, Bankless DAO</em></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Service DAOs</h5>
+                                    <p>Provide services to other projects, such as development, design, or marketing, with revenue shared among members.</p>
+                                    <p><em>Examples: RaidGuild, LexDAO</em></p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Collector DAOs</h5>
+                                    <p>Pool resources to acquire and manage collections of assets, particularly digital art and NFTs.</p>
+                                    <p><em>Examples: PleasrDAO, FlamingoDAO</em></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Impact DAOs</h5>
+                                    <p>Focus on creating positive social or environmental impact through collective action and funding.</p>
+                                    <p><em>Examples: KlimaDAO, Gitcoin</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Conservation DAOs: Emerging Examples</h2>
+                    <p>Several DAOs have emerged specifically focused on environmental conservation and sustainability:</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-header">Carbonland DAO</div>
+                                <div class="card-body">
+                                    <p>Carbonland DAO aims to protect forests and their carbon sequestration capacity through collective ownership and management of forest land.</p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>Tokenized land ownership through NFTs</li>
+                                        <li>Carbon credit generation and distribution</li>
+                                        <li>Decentralized land management decisions</li>
+                                    </ul>
+                                    <a href="https://carbonlanddao.com/" target="_blank" class="btn btn-primary">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-header">KlimaDAO</div>
+                                <div class="card-body">
+                                    <p>KlimaDAO aims to accelerate the price appreciation of carbon assets by creating a liquid carbon-backed currency and ecosystem, driving climate action.</p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>Carbon-backed treasury and currency</li>
+                                        <li>Automated market operations</li>
+                                        <li>Carbon retirement functionality</li>
+                                    </ul>
+                                    <a href="https://www.klimadao.finance/" target="_blank" class="btn btn-primary">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-header">MesoReefDAO</div>
+                                <div class="card-body">
+                                    <p>MesoReefDAO focuses on regenerating coral reef conservation through decentralized science (DeSci) and Web3 tools.</p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>Regenerative science framework</li>
+                                        <li>Decentralized research funding</li>
+                                        <li>Community-driven conservation projects</li>
+                                    </ul>
+                                    <a href="https://mesoreefdao.org/" target="_blank" class="btn btn-primary">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-header">Big Green DAO</div>
+                                <div class="card-body">
+                                    <p>Big Green DAO is the first non-profit led philanthropic DAO, focused on food justice and sustainable gardening initiatives across the United States.</p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>Decentralized grantmaking for food projects</li>
+                                        <li>Community governance of funding decisions</li>
+                                        <li>Transparent impact reporting</li>
+                                    </ul>
+                                    <a href="https://dao.biggreen.org/" target="_blank" class="btn btn-primary">Visit Website</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Explore Applications for Re:Wild</h3>
+                        <p>Now that we understand the fundamentals of DAOs and Web3 tools, let's explore how they can be applied to Re:Wild's conservation efforts.</p>
+                        <a href="applications.html" class="btn btn-primary">View Applications</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Our COMMON Foundation</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>DAO Briefing Paper and Pilot Proposals, prepared for Re:Wild</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button functionality
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        };
+
+        document.getElementById("backToTop").addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Specifications | Re:Wild DAO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Technical specifications for implementing DAO structures at Re:Wild">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Re:Wild DAO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dao-fundamentals.html">DAO Fundamentals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="applications.html">Applications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="opportunities-risks.html">Opportunities & Risks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilot-projects.html">Pilot Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="implementation.html">Implementation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="appendixDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Appendices
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="appendixDropdown">
+                            <li><a class="dropdown-item" href="references.html">References & Sources</a></li>
+                            <li><a class="dropdown-item active" href="technical-specs.html">Technical Specifications</a></li>
+                            <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                            <li><a class="dropdown-item" href="legal-considerations.html">Legal Considerations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" style="background-image: url('banner.png');">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Technical Specifications</h1>
+                    <p class="lead">Detailed technical requirements for implementing DAO structures at Re:Wild</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Blockchain Platform Selection</h2>
+                    <p>The choice of blockchain platform is critical for the success of Re:Wild's DAO implementations. We recommend the following approach:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Recommended Primary Platform: Polygon</div>
+                        <div class="card-body">
+                            <p><strong>Rationale:</strong></p>
+                            <ul>
+                                <li>Energy efficiency: Proof-of-Stake consensus mechanism with minimal environmental impact</li>
+                                <li>Ethereum compatibility: Access to Ethereum's robust ecosystem of tools and developers</li>
+                                <li>Low transaction costs: Affordable for frequent small transactions in community contexts</li>
+                                <li>Established ecosystem: Mature tooling, documentation, and developer community</li>
+                                <li>Strong sustainability focus: Polygon has committed to carbon-negative operations</li>
+                            </ul>
+                            
+                            <p><strong>Technical Specifications:</strong></p>
+                            <ul>
+                                <li>Consensus Mechanism: Proof of Stake (PoS)</li>
+                                <li>Transaction Throughput: ~7,000 transactions per second</li>
+                                <li>Block Time: ~2 seconds</li>
+                                <li>Smart Contract Language: Solidity</li>
+                                <li>EVM Compatibility: Full</li>
+                                <li>Gas Fees: Typically &lt;$0.01 per transaction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Alternative Platforms to Consider</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Platform</th>
+                                            <th>Advantages</th>
+                                            <th>Disadvantages</th>
+                                            <th>Best Use Case</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Celo</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Mobile-first design</li>
+                                                    <li>Carbon-negative</li>
+                                                    <li>Built-in stablecoin</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Smaller developer ecosystem</li>
+                                                    <li>Less established tooling</li>
+                                                </ul>
+                                            </td>
+                                            <td>Mobile-based community projects in areas with limited infrastructure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Solana</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Very high throughput</li>
+                                                    <li>Low transaction costs</li>
+                                                    <li>Energy efficient</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Different programming model</li>
+                                                    <li>Historical stability issues</li>
+                                                </ul>
+                                            </td>
+                                            <td>High-volume data collection and processing applications</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tezos</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Formal verification</li>
+                                                    <li>On-chain governance</li>
+                                                    <li>Energy efficient</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Smaller ecosystem</li>
+                                                    <li>Different programming language</li>
+                                                </ul>
+                                            </td>
+                                            <td>Applications requiring high security and formal verification</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Smart Contract Architecture</h2>
+                    <p>The DAO implementations will require several types of smart contracts working together:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Core Contract Components</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Governance Contracts</h5>
+                                    <ul>
+                                        <li><strong>Token Contract:</strong> ERC-20 implementation for governance tokens</li>
+                                        <li><strong>Voting Contract:</strong> Manages proposal creation, voting, and execution</li>
+                                        <li><strong>Delegation Contract:</strong> Enables vote delegation to representatives</li>
+                                        <li><strong>Timelock Contract:</strong> Enforces delay between vote approval and execution</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Treasury Contracts</h5>
+                                    <ul>
+                                        <li><strong>Treasury Contract:</strong> Securely holds and manages DAO funds</li>
+                                        <li><strong>Funding Contract:</strong> Manages distribution of funds to projects</li>
+                                        <li><strong>Escrow Contract:</strong> Holds funds for milestone-based releases</li>
+                                        <li><strong>Exchange Contract:</strong> Handles conversion between cryptocurrencies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Project Management Contracts</h5>
+                                    <ul>
+                                        <li><strong>Project Registry:</strong> Maintains database of conservation projects</li>
+                                        <li><strong>Milestone Contract:</strong> Tracks and verifies project milestones</li>
+                                        <li><strong>Reporting Contract:</strong> Manages submission and verification of reports</li>
+                                        <li><strong>Impact Verification:</strong> Validates conservation outcomes</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Integration Contracts</h5>
+                                    <ul>
+                                        <li><strong>Oracle Contract:</strong> Connects to external data sources</li>
+                                        <li><strong>Bridge Contract:</strong> Enables cross-chain interoperability</li>
+                                        <li><strong>Identity Contract:</strong> Manages user identity and permissions</li>
+                                        <li><strong>API Contract:</strong> Provides interfaces for external systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Contract Security Requirements</div>
+                        <div class="card-body">
+                            <ol>
+                                <li><strong>Formal Verification:</strong> Mathematical proof of contract correctness for critical components</li>
+                                <li><strong>Multiple Audits:</strong> At least two independent security audits from reputable firms</li>
+                                <li><strong>Timelocks:</strong> Mandatory delay periods for sensitive operations</li>
+                                <li><strong>Multisignature Requirements:</strong> Multiple approvals for treasury operations</li>
+                                <li><strong>Emergency Pause:</strong> Ability to pause contracts in case of detected vulnerabilities</li>
+                                <li><strong>Upgrade Mechanisms:</strong> Secure paths for contract upgrades while preserving state</li>
+                                <li><strong>Rate Limiting:</strong> Restrictions on transaction frequency and volume</li>
+                                <li><strong>Comprehensive Testing:</strong> Extensive unit and integration testing</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h2>Token Economics</h2>
+                    <p>The design of token economics is crucial for aligning incentives and ensuring sustainable governance:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Governance Token Design</div>
+                        <div class="card-body">
+                            <h5>Token Utility:</h5>
+                            <ul>
+                                <li><strong>Governance Rights:</strong> Proposal creation and voting</li>
+                                <li><strong>Reputation Building:</strong> Earned through positive contributions</li>
+                                <li><strong>Staking:</strong> Time-locked commitment to the ecosystem</li>
+                                <li><strong>Curation:</strong> Signaling value of conservation projects</li>
+                            </ul>
+                            
+                            <h5>Token Distribution:</h5>
+                            <ul>
+                                <li><strong>Community Allocation:</strong> 40% - Distributed to active participants and stakeholders</li>
+                                <li><strong>Conservation Partners:</strong> 25% - Allocated to conservation organizations and communities</li>
+                                <li><strong>Treasury:</strong> 20% - Held for future ecosystem development</li>
+                                <li><strong>Core Team:</strong> 10% - For development team with vesting schedule</li>
+                                <li><strong>Advisors:</strong> 5% - For technical and conservation advisors</li>
+                            </ul>
+                            
+                            <h5>Vesting and Release:</h5>
+                            <ul>
+                                <li><strong>Initial Circulation:</strong> 15% at launch</li>
+                                <li><strong>Linear Vesting:</strong> 4-year vesting schedule for team and advisor allocations</li>
+                                <li><strong>Milestone-Based Release:</strong> Treasury tokens released based on ecosystem growth metrics</li>
+                                <li><strong>Community Earning:</strong> Continuous distribution through participation and contribution</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Incentive Mechanisms</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Participation Incentives:</h5>
+                                    <ul>
+                                        <li>Governance participation rewards</li>
+                                        <li>Contribution-based token earning</li>
+                                        <li>Reputation multipliers for consistent participation</li>
+                                        <li>Delegation rewards for active representatives</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Conservation Incentives:</h5>
+                                    <ul>
+                                        <li>Impact verification rewards</li>
+                                        <li>Data collection bounties</li>
+                                        <li>Project milestone achievement bonuses</li>
+                                        <li>Long-term outcome-based rewards</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Governance Mechanisms</h2>
+                    <p>The governance system must balance decentralization with expertise and efficiency:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Governance Structure</div>
+                        <div class="card-body">
+                            <h5>Multi-tiered Governance Model:</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Governance Level</th>
+                                            <th>Participants</th>
+                                            <th>Decision Scope</th>
+                                            <th>Voting Mechanism</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Protocol Governance</td>
+                                            <td>All token holders</td>
+                                            <td>Major protocol changes, treasury allocations, parameter updates</td>
+                                            <td>Token-weighted voting with time-lock</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conservation Council</td>
+                                            <td>Elected representatives and conservation experts</td>
+                                            <td>Conservation strategy, project selection criteria, impact metrics</td>
+                                            <td>Quadratic voting with expertise weighting</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Working Groups</td>
+                                            <td>Domain specialists and community volunteers</td>
+                                            <td>Specific functional areas (e.g., technical, community, science)</td>
+                                            <td>Conviction voting with delegation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Local Project DAOs</td>
+                                            <td>Local communities and project stakeholders</td>
+                                            <td>Project-specific decisions and implementation</td>
+                                            <td>Holographic consensus with local bias</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h5 class="mt-3">Proposal Process:</h5>
+                            <ol>
+                                <li><strong>Ideation:</strong> Open forum for discussion and refinement of ideas</li>
+                                <li><strong>Formalization:</strong> Structured proposal creation with required parameters</li>
+                                <li><strong>Sponsorship:</strong> Endorsement by token holders meeting minimum threshold</li>
+                                <li><strong>Discussion Period:</strong> Mandatory timeframe for community feedback</li>
+                                <li><strong>Voting Period:</strong> Fixed duration for vote collection</li>
+                                <li><strong>Timelock:</strong> Delay period before implementation of approved proposals</li>
+                                <li><strong>Execution:</strong> Automatic or manual implementation of approved changes</li>
+                                <li><strong>Monitoring:</strong> Ongoing tracking of proposal outcomes</li>
+                            </ol>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Voting Mechanisms</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Quadratic Voting:</h5>
+                                    <p>Cost of votes increases quadratically with the number of votes cast by an individual, preventing large token holders from dominating decisions.</p>
+                                    <p><strong>Formula:</strong> Cost = (Number of Votes)²</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Conviction Voting:</h5>
+                                    <p>Voting power accumulates over time as voters maintain their position, rewarding long-term commitment to proposals.</p>
+                                    <p><strong>Formula:</strong> Conviction = Tokens × (1 - decay^time)</p>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Holographic Consensus:</h5>
+                                    <p>Allows a small sample of voters to make decisions that are statistically likely to match the outcome of a full vote, improving scalability.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Delegation:</h5>
+                                    <p>Enables token holders to delegate their voting power to trusted representatives who can vote on their behalf.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Technical Infrastructure</h2>
+                    <p>Beyond smart contracts, a robust technical infrastructure is required:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Infrastructure Components</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Frontend Applications:</h5>
+                                    <ul>
+                                        <li><strong>Web Application:</strong> React-based responsive interface</li>
+                                        <li><strong>Mobile Application:</strong> Progressive Web App with offline capabilities</li>
+                                        <li><strong>Admin Dashboard:</strong> For monitoring and management</li>
+                                        <li><strong>Analytics Platform:</strong> For impact visualization</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Backend Services:</h5>
+                                    <ul>
+                                        <li><strong>Indexing Service:</strong> For efficient data retrieval</li>
+                                        <li><strong>Notification System:</strong> For alerts and updates</li>
+                                        <li><strong>Identity Management:</strong> For user authentication</li>
+                                        <li><strong>Data Storage:</strong> For off-chain information</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h5>Integration Points:</h5>
+                                    <ul>
+                                        <li><strong>Wallet Integration:</strong> Multiple wallet support</li>
+                                        <li><strong>Oracle Services:</strong> For external data feeds</li>
+                                        <li><strong>GIS Integration:</strong> For spatial data</li>
+                                        <li><strong>Monitoring Tools:</strong> For biodiversity data</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Security Infrastructure:</h5>
+                                    <ul>
+                                        <li><strong>Monitoring Systems:</strong> For threat detection</li>
+                                        <li><strong>Backup Solutions:</strong> For data redundancy</li>
+                                        <li><strong>Access Controls:</strong> For permission management</li>
+                                        <li><strong>Audit Logging:</strong> For security tracking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Decentralization Strategy</div>
+                        <div class="card-body">
+                            <p>We recommend a progressive decentralization approach:</p>
+                            <ol>
+                                <li><strong>Phase 1: Centralized Infrastructure</strong> - Initial deployment with traditional cloud infrastructure for reliability and ease of development</li>
+                                <li><strong>Phase 2: Hybrid Architecture</strong> - Critical components moved to decentralized infrastructure while maintaining centralized components for user experience</li>
+                                <li><strong>Phase 3: Full Decentralization</strong> - Migration of all components to decentralized alternatives as technology matures</li>
+                            </ol>
+                            
+                            <h5 class="mt-3">Decentralized Storage Options:</h5>
+                            <ul>
+                                <li><strong>IPFS:</strong> For document and media storage</li>
+                                <li><strong>Arweave:</strong> For permanent data archiving</li>
+                                <li><strong>Ceramic Network:</strong> For mutable, user-controlled data</li>
+                                <li><strong>Filecoin:</strong> For incentivized storage of large datasets</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Implementation Requirements</h2>
+                    <p>Successful implementation will require the following resources and expertise:</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Development Team</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Role</th>
+                                            <th>Responsibilities</th>
+                                            <th>Required Skills</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Blockchain Architect</td>
+                                            <td>Overall technical architecture, smart contract design</td>
+                                            <td>Solidity, blockchain architecture, security best practices</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Contract Developer</td>
+                                            <td>Implementation of core contracts</td>
+                                            <td>Solidity, testing frameworks, security patterns</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Frontend Developer</td>
+                                            <td>User interface implementation</td>
+                                            <td>React, Web3.js/ethers.js, responsive design</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Backend Developer</td>
+                                            <td>API and service implementation</td>
+                                            <td>Node.js, database design, API development</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DevOps Engineer</td>
+                                            <td>Infrastructure setup and maintenance</td>
+                                            <td>Cloud services, CI/CD, monitoring</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security Specialist</td>
+                                            <td>Security audits and best practices</td>
+                                            <td>Smart contract security, penetration testing</td>
+                                        </tr>
+                                        <tr>
+                                            <td>UX Designer</td>
+                                            <td>User experience design</td>
+                                            <td>UI/UX design, user research, accessibility</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">Development Timeline</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Phase</th>
+                                            <th>Duration</th>
+                                            <th>Key Deliverables</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Requirements & Design</td>
+                                            <td>4-6 weeks</td>
+                                            <td>Technical specifications, architecture diagrams, user stories</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Smart Contract Development</td>
+                                            <td>8-10 weeks</td>
+                                            <td>Core contracts, unit tests, integration tests</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Frontend Development</td>
+                                            <td>8-10 weeks</td>
+                                            <td>User interfaces, wallet integration, responsive design</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Backend Services</td>
+                                            <td>6-8 weeks</td>
+                                            <td>APIs, indexing services, notification systems</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security Audit</td>
+                                            <td>3-4 weeks</td>
+                                            <td>Comprehensive security review, vulnerability assessment</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing & QA</td>
+                                            <td>4-6 weeks</td>
+                                            <td>User testing, bug fixes, performance optimization</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Deployment & Launch</td>
+                                            <td>2-3 weeks</td>
+                                            <td>Testnet deployment, mainnet deployment, monitoring setup</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Explore Case Studies</h3>
+                        <p>For real-world examples of conservation DAOs in action, see our Case Studies appendix.</p>
+                        <a href="case-studies.html" class="btn btn-primary">View Case Studies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Our COMMON Foundation</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>DAO Briefing Paper and Pilot Proposals, prepared for Re:Wild</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button functionality
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        };
+
+        document.getElementById("backToTop").addEventListener("click", function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+    </script>
+</body>
+</html>

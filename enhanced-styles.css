@@ -1,0 +1,276 @@
+/* Additional styles for enhanced website appearance */
+
+/* Hero section with background image */
+.hero {
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0 60px;
+    margin-top: 56px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo styling */
+.navbar-brand img {
+    height: 40px;
+}
+
+/* Section styling */
+section h2 {
+    color: #2e7d32;
+    border-bottom: 2px solid #2e7d32;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+}
+
+/* Feature boxes */
+.feature-box, .challenge-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #2e7d32;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.challenge-box {
+    border-left-color: #d32f2f;
+}
+
+/* CTA box */
+.cta-box {
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.button-group {
+    margin-top: 15px;
+}
+
+.button-group .btn {
+    margin: 5px;
+}
+
+/* Case study info */
+.case-study-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Bibliography styling */
+.bibliography li {
+    margin-bottom: 15px;
+}
+
+/* Table styling */
+.table-responsive {
+    margin-bottom: 20px;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #2e7d32;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .card-header {
+    background-color: #1e5620;
+}
+
+body.dark-mode .feature-box, 
+body.dark-mode .challenge-box,
+body.dark-mode .case-study-info {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .cta-box {
+    background-color: #1e3e2f;
+}
+
+body.dark-mode .table {
+    color: #e0e0e0;
+}
+
+body.dark-mode .breadcrumb {
+    background-color: transparent;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e !important;
+}
+
+/* Progress bar */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    position: fixed;
+    top: 56px;
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #2e7d32;
+    width: 0%;
+}
+
+/* Search functionality */
+.search-container {
+    position: relative;
+    margin-left: 15px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: none;
+}
+
+body.dark-mode .search-results {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+body.dark-mode .search-result-item {
+    border-color: #333;
+}
+
+.search-result-item:hover {
+    background-color: #f5f5f5;
+}
+
+body.dark-mode .search-result-item:hover {
+    background-color: #2a2a2a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
+    
+    .search-container {
+        margin: 10px 0;
+    }
+    
+    .search-results {
+        width: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, .back-to-top, .dark-mode-toggle, .search-container, footer {
+        display: none !important;
+    }
+    
+    .hero {
+        padding: 20px 0;
+        margin-top: 0;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 18pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+    
+    .card {
+        break-inside: avoid;
+    }
+}
